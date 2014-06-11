@@ -15,7 +15,7 @@
 trie_t* Q[MAXQ];
 
 inline void succed(int* v){
-	(*v)=((*v)+1)&(1<<MAXQ-1);
+	(*v)=((*v)+1)&((1<<MAXQ)-1);
 }
 
 inline trie_t *trie_init(void){
