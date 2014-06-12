@@ -2,8 +2,6 @@
 
 int printtree_maxdep=0;
 
-#define COMPACT
-
 int _print_t(trie_t *tree, int is_left, int offset, int depth, char s[][255])
 {
     char b[20];
