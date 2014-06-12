@@ -1,5 +1,8 @@
 #include "trie.c"
+#include "printtree.c"
+#include "ortc.c"
 #include "stdio.h"
+
 
 /*
  * Author:cnx
@@ -8,10 +11,16 @@
 
 int main(){
     trie_t *t=trie_init();
-    trie_add(t,"cnx",3);
-    trie_add(t,"cn",4);
-    printf("%d\n",trie_find(t,"cnx"));
-    printf("%d\n",trie_find(t,"cny"));
-    printf("%d\n",trie_size(t));
+	char s[100];
+	int v;
+	while(scanf("%d\n",&v)!=EOF){
+		scanf("%s",s);
+		trie_add(t,s,v);
+		//printf("%d\n",trie_find(t,"0101"));
+		//printf("%d\n",trie_find(t,"010"));
+		print_t(t);
+	}
+	print_t(PassOne(t));
+	trie_free(t);
     return 0;
 }
