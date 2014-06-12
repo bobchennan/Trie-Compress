@@ -14,11 +14,13 @@ Algorithms include(plan):
 Also, a visualized tree can be used to view the transform of different algorithms.
 There are two views using in printtree.c, just define COMPACT or not:
 
+<pre>
 COMPACT look:                                                  
-       .-----------------  o  -----------------.                                
-  .--  o  -------.                   .-------  o  --.                           
-  o         .--  o  --.         .--  o  --.       (003)                         
-          (001)       o         o       (002)          
+	     .-----------------  o  -----------------.       
+	  .--  o  -------.                   .-------  o  --.                           
+	  o         .--  o  --.         .--  o  --.       (003)                         
+	          (001)       o         o       (002)          
+			  
 
 DEFAULT look:
                            o                                                    
@@ -27,4 +29,5 @@ DEFAULT look:
   +----+---------+                   +---------+----+                           
   o              o                   o            (003)                         
             +----+----+         +----+----+                                     
-          (001)       o         o       (002)                 		  
+          (001)       o         o       (002)       
+</pre>		  
