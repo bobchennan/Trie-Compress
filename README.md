@@ -7,9 +7,9 @@ Algorithms include(plan):
 
 *   original binary Trie
 *   ~~Path-compressed Trie(PATRICIA Tree)~~(omitted due to the backtracking overhead)
-*   ORTC algorithm
+*   Optimal Routing Table Constructor(ORTC) algorithm
 *   level compress trie
-*   XBW-b implementation
+*   Burrows-Wheeler transform for binary leaf-labeled tries(XBW-b) implementation
 
 Also, a visualized tree can be used to view the transform of different algorithms.
 There are two views using in printtree.c, just define COMPACT or not:
