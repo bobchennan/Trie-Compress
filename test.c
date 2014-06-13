@@ -1,6 +1,6 @@
-#include "trie.c"
+#include "trie.h"
 #include "printtree.c"
-#include "ortc.c"
+#include "ortc.h"
 #include "stdio.h"
 
 
@@ -22,6 +22,7 @@ int main(){
 		print_t(t);
 	}
 	print_t(PassOne(t));
+	xbw_init(t);
 	print_t(OptimalRoutingTableConstructor(t));
 	trie_free(t);
     return 0;

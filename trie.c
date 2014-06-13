@@ -9,9 +9,7 @@
  * Author:cnx
  * Date:2014.06
  */
-
-#define MAXL 14
-#define MAXQ (1<<MAXL)
+ 
 trie_t* Q[MAXQ];
 
 inline void succed(int* v){
