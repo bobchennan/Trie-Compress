@@ -1,6 +1,8 @@
 #include "ortc.h"
 #include <stdlib.h>
 
+#define M 10
+
 //Return numbers of leaves
 int transform(trie_t *root, char *si, int *sa){
 	int l=0,r=1,cnt=0;
@@ -24,6 +26,39 @@ int transform(trie_t *root, char *si, int *sa){
 		succed(&l);
 	}
 	return cnt;
+}
+
+char* transSa(int *sa, int n){
+	int ma=0,i,cnt=0,j,k=0;
+	char *ret;
+	for(i=0;i<n;++i)
+		ma=(ma>si[i])?ma:si[i];
+	while(ma!=0){
+		ma/=2;
+		cnt+=1;
+	}
+	ret=malloc(sizeof(char)*cnt*n);
+	for(i=0;i<n;++i){
+		int tmp=si[i];
+		for(j=0;j<cnt;++j){
+			if((tmp&1)==1)ret[k++]='1';
+			else ret[k++]='0';
+			tmp>>=1;
+		}
+	}
+	return ret;
+}
+
+//from ks001
+int next_combination(int n, int k){
+    int ret, b = k & -k, t = (k + b);
+    ret = (((t ^ k) >> 2) / b) | t;
+    if ((1 << n) < ret) return 0;
+    return ret;
+}
+
+char* transSi(char *si, int n){
+	//TODO
 }
 
 void xbw_init(trie_t *root, char normalized){
