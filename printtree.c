@@ -1,8 +1,10 @@
 //http://stackoverflow.com/questions/801740/c-how-to-draw-a-binary-tree-to-the-console
-
+#include "trie.h"
 int printtree_maxdep=0;
 
-int _print_t(trie_t *tree, int is_left, int offset, int depth, char s[][255])
+//#define COMPACT
+
+int _print_t(trie_t *tree, int is_left, int offset, int depth, char s[][25500])
 {
     char b[20];
     int width = 5, i;
@@ -61,12 +63,12 @@ int _print_t(trie_t *tree, int is_left, int offset, int depth, char s[][255])
 
     return left + width + right;
 }
-
+char s[1000][25500];
 int print_t(trie_t *tree)
 {
-    char s[200][255];
+    
     int i;
-	for (i = 0; i < 200; i++)
+	for (i = 0; i < 1000; i++)
         sprintf(s[i], "%80s", " ");
 
     _print_t(tree, 0, 0, 0, s);

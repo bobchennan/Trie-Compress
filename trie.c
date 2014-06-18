@@ -51,7 +51,7 @@ int trie_size(trie_t *root){
 			succed(&r);
 		}
 	}
-	return ret*sizeof(trie_t);
+	return ret;
 }
 
 void trie_save(trie_t * root, int *s){
